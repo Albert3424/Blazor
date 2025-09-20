@@ -5,10 +5,11 @@
 
 <h3>TODO</h3>
 <div>Запланировано: (@tasks.Count(task => !task.DONE))</div>
-<div>Выполненно: (@tasks.Count(task => !task.DONE))</div>
+<div>Выполненно: (@tasks.Count(task => task.DONE))</div>
 
 <input type="text" placeholder="Новая задача" @bind="task" />
 <button @onclick="AddTask">Добавить</button>
+<span class="complete-task">Complete task</span>
 
 <ul>
     @foreach(TODOitem i in tasks)
